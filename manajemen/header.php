@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Administrator - Sistem Informasi Keuangan</title>
-  
+  <title>Administrator - Pembukuan Hena Catering</title>
+
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="../assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/bower_components/font-awesome/css/font-awesome.min.css">
@@ -21,22 +22,24 @@
   <link rel="stylesheet" href="../assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-  <?php 
+  <?php
   include '../koneksi.php';
   session_start();
-  if($_SESSION['status'] != "manajemen_logedin"){
+  if ($_SESSION['status'] != "manajemen_logedin") {
     header("location:../index.php?alert=belum_login");
   }
   ?>
 
 </head>
+
 <body class="hold-transition skin-blue sidebar-mini">
 
   <style>
     #table-datatable {
       width: 100% !important;
     }
-    #table-datatable .sorting_disabled{
+
+    #table-datatable .sorting_disabled {
       border: 1px solid #f4f4f4;
     }
   </style>
@@ -57,14 +60,14 @@
 
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <?php 
+                <?php
                 $id_user = $_SESSION['id'];
-                $profil = mysqli_query($koneksi,"select * from user where user_id='$id_user'");
+                $profil = mysqli_query($koneksi, "select * from user where user_id='$id_user'");
                 $profil = mysqli_fetch_assoc($profil);
-                if($profil['user_foto'] == ""){ 
-                  ?>
+                if ($profil['user_foto'] == "") {
+                ?>
                   <img src="../gambar/sistem/user.png" class="user-image">
-                <?php }else{ ?>
+                <?php } else { ?>
                   <img src="../gambar/user/<?php echo $profil['user_foto'] ?>" class="user-image">
                 <?php } ?>
                 <span class="hidden-xs"><?php echo $_SESSION['nama']; ?> - <?php echo $_SESSION['level']; ?></span>
@@ -82,20 +85,19 @@
       <section class="sidebar">
         <div class="user-panel">
           <div class="pull-left image">
-            <?php 
+            <?php
             $id_user = $_SESSION['id'];
-            $profil = mysqli_query($koneksi,"select * from user where user_id='$id_user'");
+            $profil = mysqli_query($koneksi, "select * from user where user_id='$id_user'");
             $profil = mysqli_fetch_assoc($profil);
-            if($profil['user_foto'] == ""){ 
-              ?>
+            if ($profil['user_foto'] == "") {
+            ?>
               <img src="../gambar/sistem/user.png" class="img-circle">
-            <?php }else{ ?>
+            <?php } else { ?>
               <img src="../gambar/user/<?php echo $profil['user_foto'] ?>" class="img-circle" style="max-height:45px">
             <?php } ?>
           </div>
           <div class="pull-left info">
             <p><?php echo $_SESSION['nama']; ?></p>
-            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
         </div>
 
@@ -135,12 +137,6 @@
           </li>
 
           <li>
-            <a href="bank.php">
-              <i class="fa fa-building"></i> <span>REKENING BANK</span>
-            </a>
-          </li>
-          
-          <li>
             <a href="laporan.php">
               <i class="fa fa-file"></i> <span>LAPORAN</span>
             </a>
@@ -157,7 +153,7 @@
               <i class="fa fa-sign-out"></i> <span>LOGOUT</span>
             </a>
           </li>
-          
+
         </ul>
       </section>
       <!-- /.sidebar -->

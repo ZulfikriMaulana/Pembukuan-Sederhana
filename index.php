@@ -20,7 +20,7 @@
 
       <center>
 
-        <h3><b>FINANCE REPORT</b></h3>
+        <h3><b>FINANCE REPORT HENA CATERING</b></h3>
 
 
         <br />
@@ -40,12 +40,12 @@
 
       <div class="login-box-body">
 
-        <div class="text-center"> <img src="/keuangan2/assets/logo.ico" style="max-width:30%;">
-          <br>
+        <div class="text-center">
+
 
           <span style="color: Black;">
             <center>
-              <h4><B>Finance Apps</B></h4>
+              <h4><B>Pembukuan Hena Catering</B></h4>
             </center>
           </span></p>
           <span style="color: green;">
@@ -76,7 +76,7 @@
 
     <span style="color: white;">
       <center>
-        <h5>copyright 2020 @nblwarehouse</h5>
+        <h5>copyright 2023 @Hena Catering</h5>
       </center>
     </span></p>
 
