@@ -43,11 +43,11 @@
         <div class="text-center">
 
 
-          <span style="color: Black;">
+          <!-- <span style="color: Black;">
             <center>
               <h4><B>Pembukuan Hena Catering</B></h4>
             </center>
-          </span></p>
+          </span></p> -->
           <span style="color: green;">
             <center>
               <h5>Masukkan User & Password Anda</h5>
